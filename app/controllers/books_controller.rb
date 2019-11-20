@@ -2,20 +2,24 @@ class BooksController < ApplicationController
   def index
   	@books = Book.all
     @book = Book.new
+    @user = current_user
   end
 
   def show
     @book = Book.new
     @books = Book.find(params[:id])
+    @user = @books.user
   end
 
   def create
     @books = Book.all
     @book = Book.new(book_params)
+    @book.user_id = current_user.id
   if
     @book.save
     redirect_to book_path(@book.id), flash:{success: "You have creatad book successfully."}
   else
+    @user = current_user
     render action: :index
   end
   end
