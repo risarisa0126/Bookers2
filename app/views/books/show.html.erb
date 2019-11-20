@@ -1,0 +1,13 @@
+<h1>Book detail</h1>
+<%= flash[:success]%>
+
+<h2>Title:</h2>
+<p><%= @books.title %></p>
+<h2>Body:</h2>
+<p><%= @books.body %></p>
+
+<%= link_to"edit", edit_book_path(@books.id)%>
+<%= link_to"destroy", book_path(@books), method: :delete, data: { confirm: "Are you sure?", commit:"Ok", cancel:"キャンセル"} %>
+
+<%= render 'books/list', book: @book %>
+

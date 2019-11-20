@@ -1,0 +1,19 @@
+<h1>Books(users#show)</h1>
+
+ <% if flash[:notice] %>
+ 　<div class="flash">
+ 	<%= flash[:notice] %>
+   </div>
+ <% end %>
+
+<h2>User info</h2>
+<p>image</p>
+<%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg' %>
+<p>name</p>
+<p><%= @user.name %></p>
+<p>introduction</p>
+<p><%= @user.introduction %></p>
+
+<%= link_to"edit", edit_user_path(@user.id)%>
+
+<%= render 'books/list', book: @book %>

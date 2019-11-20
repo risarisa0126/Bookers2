@@ -1,0 +1,20 @@
+<h1>Users</h1>
+
+<table border="0" cellpadding="8" cellspacing="10">
+    <tr>
+      <th>image</th>
+      <th>name</th>
+      <th>.</th>
+    </tr>
+    <% @users.each do |user| %>
+    <tr>
+      <td>image</td>
+      <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg' %></td>
+      <td><%= user.name %></td>
+      <td><%= link_to"show", user_path(current_user.id)%></td>
+    </tr>
+    <% end %>
+  </table>
+
+
+<%= render 'books/list', book: @book %>
