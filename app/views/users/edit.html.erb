@@ -1,5 +1,16 @@
 <h1>User info</h1>
 
+<div class="error">
+  <% if @user.errors.any? %>
+   <%= @user.errors.count %>件のerrorが発生しました
+     <ul>
+     <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+  　  <% end %>
+     </ul>
+  <% end %>
+</div>
+
 <%= form_for(@user) do |f| %>
   <h4>image</h4>
   <p><%= f.attachment_field :profile_image %></p>
