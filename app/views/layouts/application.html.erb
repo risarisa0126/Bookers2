@@ -9,8 +9,10 @@
     <title>Bookers2</title>
   </head>
 
-  <body>
 
+<body>
+
+<div class="page-header">
   <div id="slidemenu">
     <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
       <% if user_signed_in? %>
@@ -39,15 +41,12 @@
         <li class="">
           <%= link_to "login", new_user_session_path %>
         </li>
-      </ul>
+       </ul>
       <% end %>
   </div>
+</div>
 
-        </div>
-      </nav>
-    </div>
-
-    <%= yield %>
+<%= yield %>
 
   </body>
 </html>

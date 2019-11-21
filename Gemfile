@@ -80,3 +80,6 @@ group :production do
   # Gemfileの1番下に追加しましょう。
   #gem 'pg'
 end
+
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'jquery-rails'
