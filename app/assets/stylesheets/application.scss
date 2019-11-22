@@ -15,3 +15,24 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.field{
+	margin-bottom:15px;
+}
+
+.flash{
+	color:green;
+}
+
+.error{
+	color:red;
+}
+
+.icon{
+	padding-left:5px;
+}
+
+.title{
+	color:#fff;
+	font-size:20px;
+}
